@@ -58,7 +58,6 @@ urls = (
 
 themerender = ThemeCoolblue()
 
-
 class test:
     def GET(self):
         contents = cms_sqlite_model.get_top_contents(10)
