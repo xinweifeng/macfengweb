@@ -1,0 +1,78 @@
+$def with (themeconfig,pagesidebar)
+<!-- content-outer -->
+<div id="content-wrap" class="clear" >
+
+  <!-- content -->
+   <div id="content">
+
+    <!-- main -->
+    <div id="main">
+    $for listdata in themeconfig.Params['listdata']:
+        <div class="post">
+            <div class="right">
+                <h2><a href="/webpy/cms/$listdata.id">$listdata.title</a></h2>
+                <p class="post-info">url: <a href="/webpy/cms/$listdata.id">$listdata.url</a>
+                </p>
+                <p>
+                    $:listdata.content
+                </p>
+                 <p><a class="more" href="/webpy/list">list &raquo;</a></p>
+            </div>
+            <div class="left">
+                <div class="post-meta">
+                    <h4>Info</h4>
+                    <ul>
+                        <li class="user"><a href="#">$listdata.author</a></li>
+                        <li class="time"><a href="#">$listdata.updatetime</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="post">
+        <h2><a href="http://t.sina.com.cn/xinweifeng">t.sina.com.cn/xinweifeng</a></a></h2>
+        <blockquote><p>
+        <img src="http://service.t.sina.com.cn/widget/qmd/1639986424/a7415e95/1.png" alt="t.sina.com.cn/xinweifeng" />
+        </p>
+        </blockquote>
+    </div>
+    <div class="post">
+        <h2>Site History</h2>
+        <table>
+            <tr>
+                <th>date</th>
+                <th>description</th>
+                <th>state</th>
+            </tr>
+            <tr>
+                <td>2010.11.22</td>
+                <td>考虑到和wordpress使用mysql争取有限的VPS资源问题，把webpy版改成使用sqlite3了。还是要赞赏一下webpy的优良扩展性，很容易就替换了。</td>
+                <td>Add Version 0.31</td>
+            </tr>
+            <tr>
+                <td>2010.11.03</td>
+                <td>构建完成了简单的cms内容发布系统，very simple....</td>
+                <td>Add Version 0.3</td>
+            </tr>
+            <tr>
+                <td>2010.10.05</td>
+                <td>整个站点使用<a href="http://webpy.org">webpy</a>（python）重构，只使用模板计划下一步使用简单wiki发布内容</td>
+                <td>Add Version 0.2</td>
+            </tr>
+            <tr>
+                <td>2010.09.15</td>
+                <td>初步搭建站点,使用<a href="http://wordpress.org">wordpress</a>建立blog，试用了<a href="http://codeigniter.com">codeigniter</a>php框架搭建<a href="http://www.macfeng.net/website">old website</a></td>
+                <td>Add Version 0.1</td>
+            </tr>
+        </table>
+    </div><!-- div.post -->
+
+    <!-- /main -->
+    </div>
+
+	$:pagesidebar      
+    <!-- content -->
+  </div>
+
+<!-- /content-out -->
+</div>

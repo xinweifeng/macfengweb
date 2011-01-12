@@ -1,0 +1,50 @@
+$def with (themeconfig,pagesidebar)
+<!-- content-outer -->
+<div id="content-wrap" class="clear" >
+
+    <!-- content -->
+    <div id="content">
+
+        <!-- main -->
+        <div id="main">
+            $if themeconfig.Params['error']!='':
+                <h2>$themeconfig.Params['error']</h2>
+            
+            <h3><a href="/webpy/cms/add">add cms content</a></h3>
+            <form action="" method="post" id="addform" style="width:650px">
+                <p>
+                    <label for="url">*content url</label><br />
+                    <input id="cms_url" name="cms_url" value="" type="text" tabindex="1" />
+                </p>
+                <p>
+                    <label for="title">content title</label><br />
+                    <input id="cms_title" name="cms_title" value="" type="text" tabindex="2" />
+                </p>
+                <p>
+                    <label for="pagetype">*pagetype</label>
+                    <input id="cms_pagetype" name="cms_pagetype" size="5" value="1" type="text" tabindex="3" />
+                </p>
+                <p>
+                    <label for="content">content</label><br />
+                    <textarea id="cms_content" name="cms_content" rows="20" cols="80" tabindex="4" ></textarea>
+                </p>
+                <p>
+                    <label for="author">author</label><br />
+                    <input id="cms_author" name="cms_author" value="macfeng admin" type="text" tabindex="5" />
+                </p>
+                <p>
+                    <label for="password">*password&submit</label><br />
+                    <input id="cms_password" name="cms_password" value="" type="text" tabindex="6" />
+                    <input class="button" type="submit" value="Submit" tabindex="7" />
+                </p>
+                    
+            </form>
+        <!-- /main -->
+        </div>
+        
+    $:pagesidebar
+    <!-- content -->
+    </div>
+
+<!-- /content-out -->
+</div>

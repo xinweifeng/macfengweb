@@ -1,0 +1,43 @@
+$def with (themeconfig,pagesidebar)
+<!-- content-outer -->
+<div id="content-wrap" class="clear" >
+
+    <!-- content -->
+    <div id="content">
+
+        <!-- main -->
+	    <div id="main">
+
+            <h2><a href="/webpy/list">List for webpy</a></h2>
+
+					<div class="navigation clear">
+						$if themeconfig.Params['pagenum']>0:
+							<div><a href="/webpy/list/${themeconfig.Params['pagenum']-1}" >&laquo; Prev PageNum</a></div>
+						<div><a href="/webpy/list/$themeconfig.Params['pagenum']" >Current PageNum : $themeconfig.Params['pagenum']</a></div>
+						<div><a href="/webpy/list/${themeconfig.Params['pagenum']+1}" >Next PageNum  &raquo; </a></div>
+					</div>
+
+					<ul class="archive">
+						$for listdata in themeconfig.Params['listdata']:
+							<li>
+								<div class="post-title"><a href="$listdata.Url"> $listdata.Title</a></div>
+								<div class="post-details">Posted on <a href="#">$listdata.PostDate</a> | Index <a href="$listdata.Url">$listdata.ID</a></div>
+							</li>
+					</ul>
+
+					<div class="navigation clear">
+						$if themeconfig.Params['pagenum']>0:
+							<div><a href="/webpy/list/${themeconfig.Params['pagenum']-1}" >&laquo; Prev PageNum</a></div>
+						<div><a href="/webpy/list/$themeconfig.Params['pagenum']" >Current PageNum:$themeconfig.Params['pagenum']</a></div>
+            <div><a href="/webpy/list/${themeconfig.Params['pagenum']+1}" >Next PageNum  &raquo; </a></div>
+					</div>
+
+        <!-- /main -->
+		</div>
+		
+		$:pagesidebar
+		<!-- content -->
+	</div>
+
+<!-- /content-out -->
+</div>

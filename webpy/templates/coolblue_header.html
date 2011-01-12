@@ -1,0 +1,39 @@
+$def with (themeconfig)
+<!--header -->
+<div id="header-wrap"><div id="header">
+
+  <a name="top"></a>
+
+  <h1 id="logo-text"><a href="webpy/index" title="">macfeng</a></h1>
+  <p id="slogan">macfeng.net webpy website </p>
+
+  <div  id="nav">
+    <ul>      
+      <li $:themeconfig.liCheckCurrent('index')>
+      <a href="/webpy/index">Home</a></li>
+      <li $:themeconfig.liCheckCurrent('child')>
+      <a href="/webpy/child">Child</a></li>
+      <li $:themeconfig.liCheckCurrent('demo')>
+      <a href="/webpy/demo">Demo</a></li>
+      <li $:themeconfig.liCheckCurrent('list')>
+      <a href="/webpy/list">List</a></li>
+      <li $:themeconfig.liCheckCurrent('about')>
+	  <a href="/webpy/about">About</a></li>
+      <li><a href="http://www.macfeng.net/livespace">LiveSpace backup</a></li>
+    </ul>
+  </div>
+    <!--  
+   <p id="rss">
+      <a href="http://www.macfeng.net/wordpress/?feed=rss2">Blog RSS feed</a>
+   </p>
+
+   <form id="quick-search" method="get" action="http://www.macfeng.net/wordpress/">
+      <fieldset class="search">
+         <label for="qsearch">Search:</label>
+         <input class="tbox" id="qsearch" type="text" name="s" value="Search Blog..." title="Start typing and hit ENTER" />
+         <button class="btn" title="Submit Search">Search</button>
+      </fieldset>
+   </form>
+    -->
+<!--/header-->
+</div></div>

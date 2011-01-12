@@ -1,0 +1,41 @@
+$def with (themeconfig,pagesidebar)
+<!-- content-outer -->
+<div id="content-wrap" class="clear" >
+
+    <!-- content -->
+    <div id="content">
+
+        <!-- main -->
+        <div id="main">
+            <div class="post">
+            $if themeconfig.Params['cmspagedata']:
+                <div class="right">
+
+                    <h2><a href="/webpy/cms/edit/$themeconfig.Params['cmspagedata'].id">$themeconfig.Params['cmspagedata'].title</a></h2>
+                    <p class="post-info">url: <a href="/webpy/cms/edit/$themeconfig.Params['cmspagedata'].id">$themeconfig.Params['cmspagedata'].url</a>
+                    </p>
+                    <p>
+                        $:themeconfig.Params['cmspagedata'].content
+                    </p>
+                </div>
+
+                <div class="left">
+                    <div class="post-meta">
+                        <h4>Info</h4>
+                        <ul>
+                            <li class="user"><a href="#">$themeconfig.Params['cmspagedata'].author</a></li>
+                            <li class="time"><a href="#">$themeconfig.Params['cmspagedata'].updatetime</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <!-- /main -->
+        </div>
+        
+    $:pagesidebar
+    <!-- content -->
+    </div>
+
+<!-- /content-out -->
+</div>

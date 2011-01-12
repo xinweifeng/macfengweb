@@ -1,0 +1,40 @@
+$def with (themeconfig,pagesidebar)
+<!-- content-outer -->
+<div id="content-wrap" class="clear" >
+
+  <!-- content -->
+   <div id="content">
+
+    <!-- main -->
+    <div id="main">
+    $for listdata in themeconfig.Params['listdata']:
+        <div class="post">
+            <div class="right">
+                <h2><a href="/webpy/cms/$listdata.id">$listdata.title</a></h2>
+                <p class="post-info">url: <a href="/webpy/cms/$listdata.id">$listdata.url</a>
+                </p>
+                <p>
+                    $:listdata.content
+                </p>
+                 <p><a class="more" href="/webpy/list">list &raquo;</a></p>
+            </div>
+            <div class="left">
+                <div class="post-meta">
+                    <h4>Info</h4>
+                    <ul>
+                        <li class="user"><a href="#">$listdata.author</a></li>
+                        <li class="time"><a href="#">$listdata.updatetime</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!-- /main -->
+    </div>
+
+	$:pagesidebar      
+    <!-- content -->
+  </div>
+
+<!-- /content-out -->
+</div>

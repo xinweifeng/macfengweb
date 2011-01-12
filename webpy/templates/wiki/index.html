@@ -1,0 +1,11 @@
+$def with (pages)
+
+<h1>Webpy Wiki</h1>
+
+<h2>Pages:</h2>
+
+<ul>
+$for page in pages:
+    <li>pagetype: $page.pagetype <a href="/webpy/wiki/$page.url">$page.url</a></li>
+
+</ul>
