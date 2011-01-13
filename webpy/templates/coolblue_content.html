@@ -16,7 +16,7 @@ $def with (themeconfig,pagesidebar)
                 <p>
                     $:listdata.content
                 </p>
-                 <p><a class="more" href="/webpy/list">list &raquo;</a></p>
+                 <p><a class="more" href="/webpy/cms/$listdata.id#disqus_thread">more and comments &raquo;</a></p>
             </div>
             <div class="left">
                 <div class="post-meta">
@@ -76,3 +76,12 @@ $def with (themeconfig,pagesidebar)
 
 <!-- /content-out -->
 </div>
+<script type="text/javascript">
+    var disqus_shortname = 'macfengwebpy'; 
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>

@@ -13,7 +13,9 @@ $def with (themeconfig,pagesidebar)
                 $for listdata in themeconfig.Params['listdata']:
                     <li>
                         <div class="post-title">url:[$listdata.url] - <a href="/webpy/cms/$listdata.id">title:[$listdata.title]</a></div>
-                        <div class="post-details">$listdata.author Posted on <a href="#">$listdata.updatetime</a> | PageType: $listdata.pagetype</div>
+                        <div class="post-details">$listdata.author Posted on <a href="#">$listdata.updatetime</a> | PageType: $listdata.pagetype
+                        </div>
+                        <div class="post-details"><a href="/webpy/cms/$listdata.id#disqus_thread">$listdata.title</a></div>
                     </li>
                 </ul>
         <!-- /main -->
@@ -25,3 +27,12 @@ $def with (themeconfig,pagesidebar)
 
 <!-- /content-out -->
 </div>
+<script type="text/javascript">
+    var disqus_shortname = 'macfengwebpy'; 
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
