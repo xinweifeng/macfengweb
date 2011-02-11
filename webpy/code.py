@@ -42,6 +42,7 @@ web.config.debug = True
 
 
 #subapp remark:'/blog', blog.app_blog,
+path_prefix = '/webpy'
 urls = (
         '/', 'reindex',
         '/home','reindex',
@@ -53,6 +54,18 @@ urls = (
         '/blog',blog.app_blog,
         '/cms',cms.app_cms,
         '/test','test',
+        #prefix
+        path_prefix+'/', 'reindex',
+        path_prefix+'/home','reindex',
+        path_prefix+'/child','child',
+        path_prefix+'/demo','demo',
+        path_prefix+'/list','defaultarchiveslist',
+        path_prefix+'/list/(\d+)','archiveslist',
+        path_prefix+'/about','about',
+        path_prefix+'/blog',blog.app_blog,
+        path_prefix+'/cms',cms.app_cms,
+        path_prefix+'/test','test',
+        
         '/(.*)', 'index',
 )
 

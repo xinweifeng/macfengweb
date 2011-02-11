@@ -1,0 +1,14 @@
+<uwsgi>
+    <socket>/tmp/uwsgi.sock</socket>
+    <master/>
+    <limit-as>512</limit-as>
+    <processes>8</processes>
+    <!-- for ubuntu 
+    <gid>www-data</gid>
+    <uid>www-data</uid>
+    -->
+    <gid>nobody</gid>
+    <uid>nobody</uid>
+    <memory-report/>
+    <vhost/>
+</uwsgi>
