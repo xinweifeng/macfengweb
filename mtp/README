@@ -1,0 +1,3 @@
+该死的GFW目前看是封锁了twitter api，只要有twitterapi调用就会将域名放入黑名单中，将所有请求hold一段时间。
+自己做一个简单的mobile twitter proxy，供自己的移动设备（iOS or Android)观看。
+前端框架使用 http://www.sencha.com/ 的 sencha touch
