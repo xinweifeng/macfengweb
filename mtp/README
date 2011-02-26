@@ -1,3 +1,74 @@
 该死的GFW目前看是封锁了twitter api，只要有twitterapi调用就会将域名放入黑名单中，将所有请求hold一段时间。
 自己做一个简单的mobile twitter proxy，供自己的移动设备（iOS or Android)观看。
 前端框架使用 http://www.sencha.com/ 的 sencha touch
+
+#twiiter return data 
+
+
+      x = twitter.statuses.public_timeline()
+
+      # The first 'tweet' in the timeline
+      x[0]
+
+      # The screen name of the user who wrote the first 'tweet'
+      x[0]['user']['screen_name']
+
+[
+    {   
+        u'user': 
+        {
+         u'follow_request_sent': False,
+         u'profile_use_background_image': True,
+         u'id': 20765944, 
+         u'verified': False, 
+         u'profile_sidebar_fill_color': u'DDFFCC', 
+         u'is_translator': False, 
+         u'profile_text_color': u'333333', 
+         u'followers_count': 57365, 
+         u'profile_sidebar_border_color': u'BDDCAD', 
+         u'location': u'Beijing,China', 
+         u'profile_background_color': u'efefe7', 
+         u'listed_count': 1867, 
+         u'utc_offset': 28800, 
+         u'statuses_count': 61354, 
+         u'description': u'\u673a\u5668\u4eba\u3002\u81ea\u52a8\u8f6c\u53d1\u73a9\u805a\u9510\u63a8\u699c(rtmeme.com)\u7684\u6700\u65b0\u9510\u63a8\u6d88\u606f\u3002\u6709\u4e8b\u513f\u8bf7\u8054\u7cfb@zhengyun \u3002', 
+         u'friends_count': 19, 
+         u'profile_link_color': u'0084B4', 
+         u'profile_image_url': u'http://a1.twimg.com/profile_images/279853426/sr_normal_normal.gif', 
+         u'notifications': False, 
+         u'show_all_inline_media': False, 
+         u'geo_enabled': False, 
+         u'id_str': u'20765944', 
+         u'profile_background_image_url': u'http://a2.twimg.com/profile_background_images/19637218/________1_.gif', 
+         u'name': u'\u4e2d\u6587\u9510\u63a8\u699c\u673a\u5668\u4eba', 
+         u'lang': u'en', 
+         u'profile_background_tile': False, 
+         u'favourites_count': 999, 
+         u'screen_name': u'rtmeme', 
+         u'url': u'http://rtmeme.com/', 
+         u'created_at': u'Fri Feb 13 12:18:19 +0000 2009', 
+         u'contributors_enabled': False, 
+         u'time_zone': u'Beijing', 
+         u'protected': False, 
+         u'following': True
+        }, 
+        u'favorited': False, 
+        u'contributors': None, 
+        u'truncated': False, 
+        u'text': u'RT @god_snake RT @panda_L: \u4eca\u5929\u548c\u65e5\u672c\u53cb\u4eba\u4e09\u56fd\u6740\u540e\u7684\u7ed3\u8bba\u662f\u3002\u5bf9\u6bd4\u65e5\u672c\u7684\u5361\u724c\u6e38\u620f\uff0c\u4e09\u56fd\u6740\u89c4\u5219\u504f\u590d\u6742\u96be\u4ee5\u805a\u96c6\u4eba\u6c14\u3002\u800c\u4e14\u6269\u5c55\u5305\u7b49\u6536\u76ca\u624b\u6bb5\u6709\u9650\u4e0d\u9002\u5408\u65e5\u672c\u5e02\u573a\u3002', 
+        u'created_at': u'Sat Feb 26 14:09:29 +0000 2011', 
+        u'retweeted': False, 
+        u'in_reply_to_status_id': None, 
+        u'coordinates': None, 
+        u'id': 41500098076606464L, 
+        u'source': u'<a href="http://rtmeme.com/" rel="nofollow">\u9510\u63a8\u699c</a>', 
+        u'in_reply_to_status_id_str': None, 
+        u'place': None, 
+        u'in_reply_to_user_id': None, 
+        u'in_reply_to_screen_name': None, 
+        u'retweet_count': 0, 
+        u'geo': None, 
+        u'in_reply_to_user_id_str': None, 
+        u'id_str': u'41500098076606464'
+    }
+]

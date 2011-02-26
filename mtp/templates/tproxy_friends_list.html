@@ -1,0 +1,18 @@
+$def with (tdatalist)
+<div id="get">
+    <div class="toolbar">
+        <h1>Friends</h1>
+        <a class="back" href="#">Home</a>
+    </div>
+    <!--  
+    <div class="info">
+        This page was loaded mtp interface /mtp/ti/friends.list.html
+    </div>
+    -->
+    <ul class="edgetoedge">
+    $for listdata in tdatalist:
+        <li class="sep">$listdata['user']['name']</li>
+        <li>$listdata['text']</li>
+        <li>$listdata['created_at']</li>
+    </ul>
+</div>
