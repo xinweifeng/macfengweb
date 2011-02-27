@@ -20,6 +20,7 @@ from entity_list_define import ListDataLite
 import blog
 import wiki
 import cms
+import tproxy
 #import cms_model
 
 import cms_sqlite_model
@@ -53,6 +54,7 @@ urls = (
         '/about','about',
         '/blog',blog.app_blog,
         '/cms',cms.app_cms,
+        '/t',tproxy.app_tproxy,
         '/test','test',
         #prefix
         path_prefix+'/', 'reindex',
@@ -64,6 +66,7 @@ urls = (
         path_prefix+'/about','about',
         path_prefix+'/blog',blog.app_blog,
         path_prefix+'/cms',cms.app_cms,
+        path_prefix+'/t',tproxy.app_tproxy,
         path_prefix+'/test','test',
         
         '/(.*)', 'index',
