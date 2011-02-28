@@ -1,0 +1,9 @@
+$def with (tdatalist)
+<ul data-role="listview">
+$for listdata in tdatalist:
+    <li data-role="list-divider">$listdata['created_at']</li>
+    <li data-icon="false">
+        <h3><a href="#">$listdata['user']['name']</a></h3>
+        <p>$listdata['text']</p>
+    </li>
+</ul>
