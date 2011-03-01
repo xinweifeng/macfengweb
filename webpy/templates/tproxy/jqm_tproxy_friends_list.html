@@ -4,6 +4,9 @@ $for listdata in tdatalist:
     <li data-role="list-divider">$listdata['created_at']</li>
     <li data-icon="false">
         <h3><a href="#">$listdata['user']['name']</a></h3>
-        <p>$listdata['text']</p>
+        <p>$listdata['text'][:40]</p>
+        <p>$listdata['text'][40:80]</p>
+        <p>$listdata['text'][80:120]</p>
+        <p>$listdata['text'][120:]</p>
     </li>
 </ul>
